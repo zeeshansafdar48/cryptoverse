@@ -16,7 +16,7 @@ import {
 } from '@ant-design/icons';
 
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi';
-import { LineChart } from '../components';
+import { Loader } from '../components';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -30,7 +30,7 @@ function CryptoDetails() {
   const cryptoDetails = data?.data?.coin;
   console.log('cryptoDetails', cryptoDetails);
 
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader />;
 
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
 
@@ -93,7 +93,7 @@ function CryptoDetails() {
           supply.
         </p>
       </Col>
-      <Select
+      {/* <Select
         defaultValue="7d"
         className="select-timeperiod"
         placeholder="Select Time Period"
@@ -107,7 +107,7 @@ function CryptoDetails() {
         coinHistory={coinHistory}
         currentPrice={millify(cryptoDetails?.price)}
         coinName={cryptoDetails?.name}
-      />
+      /> */}
       <Col className="stats-container">
         <Col className="coin-value-statistics">
           <Col className="coin-value-statistics-heading">
