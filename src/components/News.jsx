@@ -57,8 +57,8 @@ function News({ simplified }) {
                 />
               </div>
               <p>
-                {news?.description?.length > 100
-                  ? news?.description.substring(0, 100) + '...'
+                {news?.description?.length > 250
+                  ? news?.description.substring(0, 250) + '...'
                   : news?.description}
               </p>
               <div className="provider-container">
