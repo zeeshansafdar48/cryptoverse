@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
-import { Link } from 'react-router-dom';
 import { Card, Row, Col, Typography, Avatar, Select } from 'antd';
 
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
